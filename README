@@ -1,0 +1,25 @@
+How to compile for question A:
+	make
+
+/*****************************/
+Size=1000
+	sort(): 0.000463 seconds
+	v1/v2 are different.
+	insertion_sort(): 0.010508 seconds
+	v1/v2 are the same.
+
+Size=10000
+	sort(): 0.002743 seconds
+	v1/v2 are different.
+	insertion_sort(): 1.15397 seconds
+	v1/v2 are the same.
+
+Size=100000
+	sort(): 0.039782 seconds
+	v1/v2 are different.
+	insertion_sort(): 113.322 seconds
+	v1/v2 are the same.
+
+Explanation of the phenomenon:
+Take size of 1000 for example, we can find that with sort() in C++, it took about 3000 times for calculation, while for the function we defined, it took about 10^6 times. We may foresee that the second result is around 300 times the number of the first one, but actually these results are roughly estimated so the error exists, leading to the consequence that there are only 22 times in difference. However, the thing is a huge gap between these two results.
+Look at the case with size of 100000, we can notice the difference increasing, reflecting a significant disparity. 
